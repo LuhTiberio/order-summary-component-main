@@ -87,3 +87,12 @@ h4 {
   flex-direction: column;
   align-items: center;
 }
+.action-buttons .btn {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  background-color: var(--clr-blue-4);
+  color: var(--clr-blue-1);
+  padding: 1.2rem;
+  border-radius: 1rem;
+}
