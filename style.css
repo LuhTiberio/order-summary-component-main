@@ -28,6 +28,7 @@ body {
   display: grid;
   place-items: center;
 }
+
 h2,
 h4 {
   color: var(--clr-blue-5);
@@ -38,6 +39,14 @@ h4 {
   margin: 0 auto;
   padding: 1.5rem;
 }
+
+.card {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 1px 15px 25px rgba(0, 0, 0, 0.07);
+}
+
 .card-header {
   height: 20rem;
 }
@@ -47,16 +56,29 @@ h4 {
   height: 100%;
   object-fit: cover;
 }
+
 .card-content {
   padding: 3rem;
   text-align: center;
 }
+
 .card-title {
   color: var(--clr-blue-5);
   font-size: 2.2rem;
   font-weight: 900;
   margin-bottom: 1.2rem;
 }
+
+.card .order-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--clr-blue-1);
+  padding: 2rem;
+  margin: 2.5rem 0 3rem;
+  border-radius: 1rem;
+}
+
 .order-details .item {
   display: flex;
 }
@@ -66,10 +88,20 @@ h4 {
   height: 5rem;
   border-radius: 50%;
 }
+
+.order-details .item-info {
+  margin-left: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .order-details .item-name {
   font-size: clamp(1.5rem, 3vw, 1.65rem);
   margin-bottom: 3px;
 }
+
 .order-details .item-plan {
   font-size: clamp(1.5rem, 3vw, 1.6rem);
 }
@@ -78,6 +110,7 @@ h4 {
   font-size: clamp(1.3rem, 3vw, 1.4rem);
   color: var(--clr-blue-4);
 }
+
 .order-details .action:hover {
   text-decoration: none;
 }
@@ -87,6 +120,7 @@ h4 {
   flex-direction: column;
   align-items: center;
 }
+
 .action-buttons .btn {
   text-decoration: none;
   display: block;
@@ -95,4 +129,40 @@ h4 {
   color: var(--clr-blue-1);
   padding: 1.2rem;
   border-radius: 1rem;
+}
+
+.action-buttons .btn-primary {
+  box-shadow: 0 1.2rem 2rem hsl(245, 75%, 90%);
+}
+
+.action-buttons .btn-primary:hover {
+  filter: opacity(75%);
+}
+
+.action-buttons .btn-transparent {
+  width: max-content;
+  padding: 0;
+  margin-top: 2rem;
+  background: none;
+  color: var(--clr-blue-3);
+}
+
+.action-buttons .btn-transparent:hover {
+  color: var(--clr-blue-5);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background: var(--clr-blue-2) url(../images/pattern-background-mobile.svg)
+      no-repeat top;
+    background-size: cover;
+  }
+
+  .card-content {
+    padding: 3rem 2rem;
+  }
+
+  .card-header {
+    height: 17.5rem;
+  }
 }
